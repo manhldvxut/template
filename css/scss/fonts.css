@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'YuGothic-Bold';
+  src: url("../fonts/YuGothic-Bold.eot") format("embedded-opentype");
+  src: url("../fonts/YuGothic-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'YuGothic-Regular';
+  src: url("../fonts/YuGothic-Regular.eot") format("embedded-opentype");
+  src: url("../fonts/YuGothic-Regular.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: 'DNI2014-DemiBold';
+  src: url("../fonts/DIN2014-DemiBold.eot") format("embedded-opentype");
+  src: url("../fonts/DIN2014-DemiBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'DNI2014-Regular';
+  src: url("../fonts/DIN2014-Regular.eot") format("embedded-opentype");
+  src: url("../fonts/DIN2014-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/*# sourceMappingURL=fonts.css.map */

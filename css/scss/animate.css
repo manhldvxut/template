@@ -1,0 +1,17 @@
+/*repeat top - bottom*/
+div {
+  height: 100px;
+  width: 100px;
+  border: 1px solid;
+  animation: move 6s infinite forwards;
+  animation-delay: 3s; }
+
+@keyframes move {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(50px); }
+  100% {
+    transform: translateY(0px); } }
+
+/*# sourceMappingURL=animate.css.map */

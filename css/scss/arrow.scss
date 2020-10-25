@@ -1,0 +1,41 @@
+.arrow-right{
+  display: block;
+  margin: 30px auto;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  transform: rotate(135deg);
+}
+
+.triangle-bottom{
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid black;
+    width: 15px;
+    height: 20px;
+}
+
+
+.step-flow{
+    background:inherit;
+    margin-bottom: 0;
+    &:before{
+        position: absolute;
+        border-top: 70px solid transparent;
+        border-bottom: 0px solid transparent;
+        border-right: 70px solid #ccc;
+        content: "";
+        left: 0;
+        top: 0;
+        background:#000;
+    }
+    &:after{
+      width: 2px;
+        height: 26px;
+        right: 0;
+        transform: rotate(90deg);
+        left: 80px;
+        top: 26%;
+    }
+}

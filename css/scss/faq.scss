@@ -1,0 +1,119 @@
+.faq-section {
+    background: #fdfdfd;
+    min-height: 100vh;
+    padding: 10vh 0 0;
+}
+
+.faq {
+    background: #FFFFFF;
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    .card{
+        border: none;
+        background: none;
+        border-bottom: 1px dashed #CEE1F8;
+        .card-header{
+             padding: 0px;
+            border: none;
+            background: none;
+            -webkit-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            &:hover{
+                background: rgba(233, 30, 99, 0.1);
+                padding-left: 10px;
+            }
+            .faq-title{
+              width: 100%;
+              text-align: left;
+              padding: 0px;
+              padding-left: 30px;
+              padding-right: 30px;
+              font-weight: 400;
+              font-size: 15px;
+              letter-spacing: 1px;
+              color: #3B566E;
+              text-decoration: none !important;
+              -webkit-transition: all 0.3s ease 0s;
+              -moz-transition: all 0.3s ease 0s;
+              -o-transition: all 0.3s ease 0s;
+              transition: all 0.3s ease 0s;
+              cursor: pointer;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              position: relative;
+              &:after{
+                  position:absolute;
+                  content: "";
+                  width: 16px;
+                  height: 2px;
+                  background: red;
+                  border-radius: 2px;
+                  transition: all .25s cubic-bezier(0.4, 0.0, 0.2, 1);
+                  right: 0;
+              }
+              &:before{
+                  content: '';
+                  position: absolute;
+                  width: 16px;
+                  height: 2px;
+                  background: red;
+                  border-radius: 2px;
+                  transition: all .25s cubic-bezier(0.4, 0.0, 0.2, 1);
+                  transform: rotate(90deg);
+                  right: 0;
+              }
+              &.active{
+                  &:before{
+                      transform: rotate(0deg);
+                  }
+              }
+              p{
+                  padding: 0 190px;
+                  margin-bottom: 10px;
+              }
+              .badge{
+                  display: inline-block;
+                  width: 20px;
+                  height: 20px;
+                  line-height: 14px;
+                  float: left;
+                  -webkit-border-radius: 100px;
+                  -moz-border-radius: 100px;
+                  border-radius: 100px;
+                  text-align: center;
+                  background: #E91E63;
+                  color: #fff;
+                  font-size: 12px;
+                  margin-right: 20px;
+              }
+            }
+        }
+        .card-body{
+            padding: 30px;
+            padding-left: 35px;
+            padding-bottom: 16px;
+            font-weight: 400;
+            font-size: 16px;
+            color: #6F8BA4;
+            line-height: 28px;
+            letter-spacing: 1px;
+            border-top: 1px solid #F3F8FF;
+            p{
+                margin-bottom: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .faq {
+        margin-bottom: 30px;
+    }
+
+    .faq .card .card-header .faq-title {
+        line-height: 26px;
+        margin-top: 10px;
+    }
+}

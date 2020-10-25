@@ -1,0 +1,18 @@
+/*color*/
+$blue: #585757;
+$red: #DC000C;
+$Yb:'YuGothic-Bold'; 
+$Yr:'YuGothic-Regular'; 
+$Dn:'DNI2014-DemiBold'; 
+a:hover{
+  text-decoration: inherit !important;
+}
+@import "scss/reset.scss";
+@import "scss/fonts.scss";
+@import "scss/header.scss";
+@import "scss/top-main.scss";
+@import "scss/btn.scss";
+@import "scss/news.scss";
+@import "scss/arrow.scss";
+@import "scss/faq.scss";
+ 
