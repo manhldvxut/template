@@ -73,10 +73,6 @@ $(document).ready(function(){
 
 
   /*faq*/
-    $( ".faq-title" ).click(function(e) {
-        e.preventDefault();
-      $(this).toggleClass('active');
-    });
 
 })
 
