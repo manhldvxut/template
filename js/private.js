@@ -217,6 +217,7 @@ jQuery(document).ready(function() {
     if($('#defaultCheck1').prop("checked") == true){
         innerHtml="google.com";
         link = innerHtml;
+        window.open("https://www.w3schools.com");
         return true;
    }
    if($('#defaultCheck2').prop("checked") == true){
