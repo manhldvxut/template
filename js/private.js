@@ -217,8 +217,10 @@ jQuery(document).ready(function() {
     if($('#defaultCheck1').prop("checked") == true){
         innerHtml="google.com";
         link = innerHtml;
-        window.open("https://www.w3schools.com");
-        return true;
+        window.location.replace("http://stackoverflow.com");
+        /*window.location.href = "google.com";*/
+        /*window.open("https://www.w3schools.com");*/
+        return false;
    }
    if($('#defaultCheck2').prop("checked") == true){
         innerHtml="ping.com";
