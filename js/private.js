@@ -201,4 +201,30 @@ jQuery(document).ready(function() {
         }
       });
     });
+
+     /*menu-right*/
+     $( ".inview" ).click(function() {
+        $(this).toggleClass("open");
+        $("#gNavi").toggleClass("open");
+    });
+
+     
 });
+
+ function sendData() {
+    var link;
+    
+    if($('#defaultCheck1').prop("checked") == true){
+        innerHtml="google.com";
+        link = innerHtml;
+        return true;
+   }
+   if($('#defaultCheck2').prop("checked") == true){
+        innerHtml="ping.com";
+        link = innerHtml;
+        return true;
+   }
+   else{
+         return false;
+    }
+}
