@@ -1,0 +1,20 @@
+.company-table {
+  margin-bottom: 80px; }
+  .company-table.table-bordered td, .company-table.table-bordered th {
+    padding: 16px 20px; }
+
+.acsset-company {
+  margin-bottom: 100px; }
+  .acsset-company .desc {
+    line-height: 1.8; }
+
+@media (max-width: 767px) {
+  .company-table tr {
+    display: block; }
+    .company-table tr th {
+      width: 100%;
+      display: block; }
+    .company-table tr td {
+      display: block; } }
+
+/*# sourceMappingURL=table.css.map */
