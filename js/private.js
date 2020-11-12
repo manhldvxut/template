@@ -211,23 +211,21 @@ jQuery(document).ready(function() {
      
 });
 
+/*
+
+*/
+
  function sendData() {
-    var link;
-    
-    if($('#defaultCheck1').prop("checked") == true){
-        innerHtml="google.com";
-        link = innerHtml;
-        window.location.replace("http://stackoverflow.com");
-        /*window.location.href = "google.com";*/
-        /*window.open("https://www.w3schools.com");*/
-        return false;
-   }
-   if($('#defaultCheck2').prop("checked") == true){
-        innerHtml="ping.com";
-        link = innerHtml;
-        return true;
-   }
-   else{
-         return false;
-    }
+    var link = "https://user.hokkaido-gas.co.jp/procedure/MU1010.aspx?type=move&value="
+    let checkbox = $('.form-check').find('input');
+    let value =[0,0,0,0];
+    $.map(checkbox, function(val, i){
+        if(val.checked === true){
+            value[i] = 1;
+        }else{
+            value[i] = 0
+        }
+    })
+    var str = value.join("");
+    window.open(link + str)
 }
