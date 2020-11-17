@@ -214,18 +214,16 @@ jQuery(document).ready(function() {
 /*
 
 */
-
- function sendData() {
+  function sendData() {
     var link = "https://user.hokkaido-gas.co.jp/procedure/MU1010.aspx?type=move&value="
-    let checkbox = $('.form-check').find('input');
-    let value =[0,0,0,0];
+    var checkbox = $('.form-check').find('input');
+    var value =[0,0,0,0];
     $.map(checkbox, function(val, i){
         if(val.checked === true){
-            value[i] = 1;
-        }else{
-            value[i] = 0
+            let index = parseInt(val.value)
+            value[index - 1] = 1;
         }
     })
     var str = value.join("");
     window.open(link + str)
-}
+};
