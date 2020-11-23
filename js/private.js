@@ -227,3 +227,15 @@ jQuery(document).ready(function() {
     var str = value.join("");
     window.open(link + str)
 };
+
+function setprice(){
+    var selectValues = { "1": "test 1", "2": "test 2" };
+    $.each(selectValues, function(key, value) {   
+    $('#mySelect')
+     .append($("<option></option>")
+                .attr("value",key)
+                .text(value)); 
+    });
+    console.log(value)
+
+}
