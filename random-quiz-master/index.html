@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bahiana|Barrio" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="load--page-start">
+        <div class="flex">
+            <a href="google.com">cancel</a>
+            <a href="" id="start-page">start ???</a>
+        </div>
+    </div>
+    <div class="body--content">
+        <div class="res_product" id="productResult01">
+            fresh ル シェーブルフォイユ sp 01
+        </div>
+        <div class="res_product" id="productResult02">
+            //relax ラ エルブ sp 02
+        </div>
+        <div class="res_product" id="productResult03">
+            cool ル トレーフル sp 03
+        </div>
+        <div class="res_product" id="productResult04">
+            sweet ラ　フレーズ sp 04
+        </div>
+        <div class="res_product" id="productResult05">
+           elegant ラ ローズ ブランシュ sp 05
+        </div>
+        <div class="res_product" id="productResult06">
+           sexy ラ レーヴル sp 06
+        </div>
+
+        <div class="quiz-container">
+            <div id="quiz"></div>
+        </div>
+        <div id="progress-wrap">
+            <div id="progress-bar"></div>
+        </div>
+        <button id="previous">Previous Question</button>
+        <button id="next">Next Question</button>
+        <button id="submit">Submit</button>
+        <div id="results"></div>
+    </div>
+
+    <style>
+        .load--page-start .flex{
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .body--content{
+            display: none;
+        }
+    </style>
+    <script>
+        $('#start-page').click(function(e){
+            e.preventDefault();
+            $('.body--content').fadeIn(1000);
+            $('.load--page-start').hide();
+        })
+    </script>
+
+    <script src="main.js"></script>
+</body>
+</html>
