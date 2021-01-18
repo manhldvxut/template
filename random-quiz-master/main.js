@@ -2,6 +2,11 @@ var questions = [
 /*questions01*/
     {
         question: "いつ使いたい？",
+        images: {
+            1: "google.com",
+            2: "24j.co.jp",
+            3: "test"
+        },
         choices: {
             1: "オフィスなど普段使いで",
             2: "友人と過ごす休日に",
@@ -12,6 +17,11 @@ var questions = [
     /*questions02*/
     {
         question: "言われて嬉しいのは？",
+         images: {
+            1: "vnexpress.vn",
+            2: "txt",
+            3: "aaaa"
+        },
         choices: {
             1: "可愛い",
             2: "綺麗"
@@ -56,9 +66,10 @@ function quiz(){
     var output = [];
 
     // build HTML for each question
-    questions.forEach((currentQuestion, questionNumber) => {
+    questions.forEach((currentQuestion, questionNumber) => { 
         // store list of answer choices
         var choices = [];
+        var choicesImg= [];
 
         // for each answer
         for(letter in currentQuestion.choices) {
@@ -76,11 +87,23 @@ function quiz(){
 
         }
 
+        for(imagesNum in currentQuestion.images){
+            choicesImg.push(
+                `<div>
+                    ${currentQuestion.images[imagesNum]}
+                </div>`
+            )
+        }
+
         // add this question and answer to output
         output.push(
             `<div class="slide">
                 <div class="question">${currentQuestion.question}</div>
-                <div class="choices">${choices.join("")}</div>
+                <div class="choicesImg">${choicesImg.join("")}</div>
+                <div class="choices">
+                    ${choices.join("")}
+                </div>
+
             </div>`
              // 'join' expression takes list of answers and puts them together in one string
         );
