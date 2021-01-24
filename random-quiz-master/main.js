@@ -2,31 +2,19 @@ var questions = [
 /*questions01*/
     {
         question: "いつ使いたい？",
-        images: {
-            1: "google.com",
-            2: "24j.co.jp",
-            3: "test"
-        },
         choices: {
             1: "オフィスなど普段使いで",
             2: "友人と過ごす休日に",
             3: "特別な人とのデートに"
         },
-        
     },
     /*questions02*/
     {
         question: "言われて嬉しいのは？",
-         images: {
-            1: "vnexpress.vn",
-            2: "txt",
-            3: "aaaa"
-        },
         choices: {
             1: "可愛い",
             2: "綺麗"
         },
-        
     },
 
     /*questions03*/
@@ -37,7 +25,6 @@ var questions = [
             2: "自然体で抜け感のある雰囲気",
             3: "洗練された大人な雰囲気"
         },
-        
     },
     /*questions04*/
     {
@@ -47,7 +34,6 @@ var questions = [
             2: "ミディアム",
             3: "ロング"
         },
-        
     },
     /*questions05*/
     {
@@ -56,10 +42,8 @@ var questions = [
             1: "モノトーン",
             2: "パステル"
         },
-        
     }
 ];
-
 
 function quiz(){
     // stores HTML output
@@ -76,7 +60,7 @@ function quiz(){
 
             // add HTML radio button
             choices.push(
-                // template literals
+                //
                 `<label><input type="radio" name="question${questionNumber}" value="${letter}">
                     <span class="customRadio"></span>
                         ${letter} :
@@ -84,15 +68,6 @@ function quiz(){
                 </label>`
 
             );
-
-        }
-
-        for(imagesNum in currentQuestion.images){
-            choicesImg.push(
-                `<div>
-                    ${currentQuestion.images[imagesNum]}
-                </div>`
-            )
         }
 
         // add this question and answer to output
@@ -103,9 +78,8 @@ function quiz(){
                 <div class="choices">
                     ${choices.join("")}
                 </div>
-
             </div>`
-             // 'join' expression takes list of answers and puts them together in one string
+             //
         );
     });
     // combine output list into one string of HTML and put it on the page
@@ -157,8 +131,7 @@ function results(){
         var answerContainer = answerContainers[questionNumber];
         // selects which radio button has been checked
         var selector = `input[name=question${questionNumber}]:checked`;
-        // userAnswer is which button has been checked
-        // {} empty object for if user didn't select answer
+
         var userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
         /*console.log(userAnswer);*/
@@ -167,117 +140,70 @@ function results(){
         var dataChecked = arrayChecked;
 
         var dataCheckedJoin = dataChecked.join('')
-        //console.log(dataCheckedJoin);
 
-        /*if(dataCheckedJoin === '11111'){
-            console.log('aaa');
-        }*/
-
-        // product 01
+         // product 01
         $.each(product01,function(index,value){
             if(dataCheckedJoin === value){
-                $('#productResult01').show()
-                $('#productResult02').hide()
-                $('#productResult03').hide()
-                $('#productResult04').hide()
-                $('#productResult05').hide()
-                $('#productResult06').hide()
+                $('.res_product.carousel__cell:nth-child(2)').addClass('fadeInUp');
+                $('.res_product.carousel__cell:nth-child(1), .res_product.carousel__cell:nth-child(3), .res_product.carousel__cell:nth-child(4), .res_product.carousel__cell:nth-child(5), .res_product.carousel__cell:nth-child(6)').removeClass('fadeInUp');
+                
             }
 
         })
         // product 02
         $.each(product02,function(index,value){
             if(dataCheckedJoin === value){
-                $('#productResult02').show()
-                $('#productResult01').hide()
-                $('#productResult03').hide()
-                $('#productResult04').hide()
-                $('#productResult05').hide()
-                $('#productResult06').hide()
+                $('.res_product.carousel__cell:nth-child(3)').addClass('fadeInUp');
+                $('.res_product.carousel__cell:nth-child(1), .res_product.carousel__cell:nth-child(2), .res_product.carousel__cell:nth-child(4), .res_product.carousel__cell:nth-child(5), .res_product.carousel__cell:nth-child(6)').removeClass('fadeInUp');
+              
             }
-        })
-
-        // product 03
+        })// product 03
         $.each(product03,function(index,value){
             if(dataCheckedJoin === value){
-                $('#productResult03').show()
-                $('#productResult01').hide()
-                $('#productResult02').hide()
-                $('#productResult04').hide()
-                $('#productResult05').hide()
-                $('#productResult06').hide()
+              $('.res_product.carousel__cell:nth-child(5)').addClass('fadeInUp');
+              $('.res_product.carousel__cell:nth-child(1), .res_product.carousel__cell:nth-child(2), .res_product.carousel__cell:nth-child(3), .res_product.carousel__cell:nth-child(4), .res_product.carousel__cell:nth-child(6)').removeClass('fadeInUp');
             }
         })
 
         // product 04
         $.each(product04,function(index,value){
             if(dataCheckedJoin === value){
-                $('#productResult04').show()
-                $('#productResult01').hide()
-                $('#productResult03').hide()
-                $('#productResult02').hide()
-                $('#productResult05').hide()
-                $('#productResult06').hide()
+              $('.res_product.carousel__cell:nth-child(4)').addClass('fadeInUp');
+             $('.res_product.carousel__cell:nth-child(1), .res_product.carousel__cell:nth-child(2), .res_product.carousel__cell:nth-child(3), .res_product.carousel__cell:nth-child(5), .res_product.carousel__cell:nth-child(6)').removeClass('fadeInUp');
             }
         })
 
         // product 05
         $.each(product05,function(index,value){
             if(dataCheckedJoin === value){
-                $('#productResult05').show()
-                $('#productResult01').hide()
-                $('#productResult03').hide()
-                $('#productResult04').hide()
-                $('#productResult02').hide()
-                $('#productResult06').hide()
+              $('.res_product.carousel__cell:nth-child(6)').addClass('fadeInUp');
+              $('.res_product.carousel__cell:nth-child(1), .res_product.carousel__cell:nth-child(2), .res_product.carousel__cell:nth-child(3), .res_product.carousel__cell:nth-child(4), .res_product.carousel__cell:nth-child(5)').removeClass('fadeInUp');
             }
         })
 
         // product 06
         $.each(product06,function(index,value){
             if(dataCheckedJoin === value){
-                $('#productResult06').show()
-                $('#productResult01').hide()
-                $('#productResult03').hide()
-                $('#productResult04').hide()
-                $('#productResult05').hide()
-                $('#productResult02').hide()
+               $('.res_product.carousel__cell:nth-child(1)').addClass('fadeInUp');
+                $('.res_product.carousel__cell:nth-child(2), .res_product.carousel__cell:nth-child(3), .res_product.carousel__cell:nth-child(4), .res_product.carousel__cell:nth-child(5), .res_product.carousel__cell:nth-child(6)').removeClass('fadeInUp');
+               
             }
         })
-
-        // if answer is correct
-        if(userAnswer === currentQuestion.answer) {
-            // add to number of correct answers
-            numCorrect++;
-
-            // green when correct
-            /*answerContainers[questionNumber].style.color = "rgb(0, 88, 4)";*/
-        } else {   
-            // red when incorrect
-            /*answerContainers[questionNumber].style.color = "rgb(141, 0, 0)";*/
-        }
     });
 
-    // show number of correct answers out of total
-  /*  resultsContainer.innerHTML = `${numCorrect} out of ${questions.length}`;*/
 }
 
 function showSlide(n) {
-    // Hide all slides by removing "active-slide" class from all questions
     slides[currentSlide].classList.remove("active-slide");
-    // Show new slide by adding "active-slide" class to current question
     slides[n].classList.add("active-slide");
-    // Update the current slide number
     currentSlide = n;
 
-    // First slide - hide previous button - Else show previous button
     if(currentSlide === 0) {
         previousButton.style.display = "none";
     } else {
         previousButton.style.display = "inline-block";
     }
 
-    // Last slide - hide next button and show submit button - Else show next button and hide submit button
     if(currentSlide === slides.length - 1) {
         nextButton.style.display = "none";
         submitButton.style.display = "inline-block";
@@ -293,7 +219,20 @@ $( document ).ready(function() {
         $('input[value="1"]').attr('checked','checked');
     }
 
+    findClass();
+    $('#next').click(function(){
+        findClass();
+    })
 })
+
+function findClass(){
+    $('.slide').each(function(){
+        if($(this).is('.active-slide')){
+            $(this).css('display', 'inline-flex-')
+        }
+    });
+}
+
 
 function nextSlide() {
     showSlide(currentSlide + 1);
