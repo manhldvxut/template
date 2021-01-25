@@ -1,7 +1,7 @@
 var questions = [
 /*questions01*/
     {
-        question: "いつ使いたい？",
+        question: `いつ使いたい？<img id="ad1" src="https://cdn.shopify.com/s/files/1/0514/8786/7038/products/eclat_300x300.jpg?v=1610609031" alt="">`,
         choices: {
             1: "オフィスなど普段使いで",
             2: "友人と過ごす休日に",
@@ -16,7 +16,6 @@ var questions = [
             2: "綺麗"
         },
     },
-
     /*questions03*/
     {
         question: "なりたい雰囲気は？",
@@ -214,6 +213,11 @@ function showSlide(n) {
 }
 
 $( document ).ready(function() {
+    // chuyen class sang class khac
+    var $pac = $('.showlistImg');
+    $pac.eq(0).prependTo('#ad1');
+    $pac.eq(1).prependTo('#wrapper2');
+    // end
 
     if ($('input').is(':not(:checked)')){
         $('input[value="1"]').attr('checked','checked');
